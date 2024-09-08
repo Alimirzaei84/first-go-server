@@ -18,8 +18,8 @@ func main() {
 
 
  // Apply middleware
- router.Use(LoggingMiddleware)
- router.Use(SetHeadersMiddleware)
+    router.Use(LoggingMiddleware)
+    router.Use(SetHeadersMiddleware)
 
     router.HandleFunc("/movies", getMovies).Methods("GET")
     router.HandleFunc("/movies/{id}", getMovie).Methods("GET")
